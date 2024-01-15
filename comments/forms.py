@@ -1,3 +1,5 @@
+from captcha.fields import CaptchaField
+
 from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext as _
@@ -9,6 +11,7 @@ class CommentForm(forms.Form):
     username = forms.CharField(max_length=50, widget=forms.TextInput())
     email = forms.EmailField(widget=forms.EmailInput())
     homepage = forms.URLField(required=False)
+    captcha = CaptchaField()
     text = forms.CharField(
         widget=forms.Textarea(attrs={"rows": 4}), max_length=1000
     )
