@@ -1,0 +1,600 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add captcha store",
+    "content_type": 6,
+    "codename": "add_captchastore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change captcha store",
+    "content_type": 6,
+    "codename": "change_captchastore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete captcha store",
+    "content_type": 6,
+    "codename": "delete_captchastore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view captcha store",
+    "content_type": 6,
+    "codename": "view_captchastore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 7,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 7,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 7,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 7,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 8,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 8,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 8,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 8,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "captcha",
+    "model": "captchastore"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "comments",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "comments",
+    "model": "comment"
+  }
+},
+{
+  "model": "captcha.captchastore",
+  "pk": 20,
+  "fields": {
+    "challenge": "RFVS",
+    "response": "rfvs",
+    "hashkey": "fd9dd0563956abc061bc24b6260d9210bbf8e97f",
+    "expiration": "2024-01-16T15:14:14.940Z"
+  }
+},
+{
+  "model": "captcha.captchastore",
+  "pk": 22,
+  "fields": {
+    "challenge": "WWQC",
+    "response": "wwqc",
+    "hashkey": "543b582456d45e7c267df460fd94168520bb0943",
+    "expiration": "2024-01-16T15:14:58.656Z"
+  }
+},
+{
+  "model": "captcha.captchastore",
+  "pk": 25,
+  "fields": {
+    "challenge": "DPNR",
+    "response": "dpnr",
+    "hashkey": "a13a978f74f764fc617bc30e3d3cb460649e5a7b",
+    "expiration": "2024-01-16T15:16:13.755Z"
+  }
+},
+{
+  "model": "captcha.captchastore",
+  "pk": 28,
+  "fields": {
+    "challenge": "SKQI",
+    "response": "skqi",
+    "hashkey": "f6d3e21ab218eef1a0db901c853ba301234b313f",
+    "expiration": "2024-01-16T15:17:12.452Z"
+  }
+},
+{
+  "model": "comments.user",
+  "pk": 1,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-16T14:54:34.922Z",
+    "email": "admin@gmail.com",
+    "home_page": "https://google.com",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "comments.user",
+  "pk": 2,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "red",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-16T14:55:30.090Z",
+    "email": "red@gmail.com",
+    "home_page": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "comments.user",
+  "pk": 3,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "green",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-16T14:56:52.299Z",
+    "email": "green@gmail.com",
+    "home_page": "https://google.com",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "comments.user",
+  "pk": 4,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "rest",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-01-16T15:12:12.429Z",
+    "email": "rest@gmail.com",
+    "home_page": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "parent_comment": null,
+    "text": "Django is a flexible framework for quickly creating Python applications. By default, Django applications are configured to store data into a lightweight SQLite database file. While this works well under some loads, a more traditional database management system can improve performance in production.\n\nIn this guide, you will install and configure PostgreSQL (often referred to as Postgres) to use with your Django applications. You will install the necessary software, create database credentials for our application, and then start and configure a new Django project to use this backend.",
+    "created_at": "2024-01-16T14:54:34.928Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "parent_comment": null,
+    "text": "By default, Postgres uses an authentication scheme called “peer authentication” for local connections. Basically, this means that if the user’s operating system username matches a valid Postgres username, that user can login with no further authentication.\n\nDuring the Postgres installation, an operating system user named postgres was created to correspond to the postgres PostgreSQL administrative user. You need to use this user to perform administrative tasks. You can use sudo and pass in the username with the -u option.",
+    "created_at": "2024-01-16T14:55:30.091Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "parent_comment": null,
+    "text": "While you are here, you will also need to adjust the ALLOWED_HOSTS directive. This defines a whitelist of addresses or domain names allowed to connect to the Django instance. Any incoming requests with a Host header that is not in this list will raise an exception. Django requires that you set this to prevent a certain class of security vulnerability.",
+    "created_at": "2024-01-16T14:56:52.301Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "parent_comment": null,
+    "text": "Working capital is the lifeblood of your startup. Without it, you won’t have the funds to run day-to-day operations, regardless of your innovative ideas, patents, or paying customers.\n\nWorking capital is the difference between your startup’s current assets (cash, accounts receivable, inventory) and current liabilities (accounts payable, loan payments). The on-hand cash keeps the lights on, and it’s a clear indicator of your startup’s operational efficiency and short-term financial viability.\n\nHowever, it’s not just about having money—it’s about how you use those funds to foster sustainable growth while navigating unexpected challenges and setbacks. And that’s where the strategy behind effective working capital management comes in handy.",
+    "created_at": "2024-01-16T14:58:35.391Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 5,
+  "fields": {
+    "user": 3,
+    "parent_comment": null,
+    "text": "Working Capital Ratio (Current Ratio): The working capital ratio is calculated as a company’s current assets divided by current liabilities. A ratio above 1 indicates that the startup has more assets than liabilities, suggesting good financial health. However, a very high ratio might mean the startup isn’t investing its assets effectively.\n\nQuick Ratio (Acid-Test Ratio): This is a more stringent test to measure your company’s liquidity. It’s calculated by subtracting inventory from current assets and then dividing by current liabilities. A ratio above 1 is generally considered healthy, indicating that the startup can cover its short-term debts even without selling its inventory.\n\nWorking Capital Turnover Ratio: This ratio measures how efficiently a startup is at managing working capital to support sales. It’s calculated by dividing net sales by average working capital during an accounting period.",
+    "created_at": "2024-01-16T15:00:59.187Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "parent_comment": null,
+    "text": "Hello my <i>friends</i>",
+    "created_at": "2024-01-16T15:02:15.530Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 7,
+  "fields": {
+    "user": 1,
+    "parent_comment": null,
+    "text": "Simple Agreement for Future Equity (SAFE) agreements have recently become a popular instrument for startup financing. These agreements are a contractual promise between investors and your startup: the investor provides venture capital now in exchange for startup equity later (provided certain trigger events occur).\n\nUnlike traditional equity investments, SAFEs are designed to be straightforward and founder-friendly, deferring the valuation discussion until a later financing round. SAFEs offer a compelling alternative to the complexities of equity sales and the rigid repayment schedules of debt financing. They provide a quick injection of funds without immediately diluting ownership, allowing you to maintain control while growing your business.",
+    "created_at": "2024-01-16T15:04:00.442Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 8,
+  "fields": {
+    "user": 2,
+    "parent_comment": null,
+    "text": "Use <a href=\"https://google.com\">this</a>",
+    "created_at": "2024-01-16T15:05:36.247Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "parent_comment": null,
+    "text": "With a 96% CSAT score, we offer all support options, including phone calls with experts, knowledge base, and more, to keep you covered around the clock.",
+    "created_at": "2024-01-16T15:07:26.603Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 10,
+  "fields": {
+    "user": 2,
+    "parent_comment": 9,
+    "text": "What does it mean?",
+    "created_at": "2024-01-16T15:09:14.913Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 11,
+  "fields": {
+    "user": 1,
+    "parent_comment": 10,
+    "text": "Don't worry)",
+    "created_at": "2024-01-16T15:09:58.626Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 12,
+  "fields": {
+    "user": 3,
+    "parent_comment": 8,
+    "text": "??????",
+    "created_at": "2024-01-16T15:10:53.222Z"
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 13,
+  "fields": {
+    "user": 4,
+    "parent_comment": 8,
+    "text": "))))",
+    "created_at": "2024-01-16T15:12:12.431Z"
+  }
+}
+]
