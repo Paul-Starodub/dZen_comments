@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+  {% block content %}
+    <p><b>Sort by</b>:
+    <a href="?sort_by=user__username" class="btn btn-info">User Name</a> |
+    <a href="?sort_by=user__email" class="btn btn-info">E-mail</a> |
+    <a href="?sort_by=-created_at" class="btn btn-info">Date (Descending)</a> |
+    <a href="?sort_by=created_at" class="btn btn-info">Date (Ascending)</a>
+  </p>
+    <hr>
+  {% for comment in comments %}
+    <div>
+      {{ comment.user.username }} - <a href="{% url 'comments:comment_detail' comment.id %}" class="btn btn-secondary">{{ comment.created_at }}</a>
+      <br>
+      <br>
+      {{ comment.text|safe }}
+      <hr>
+    </div>
+  {% endfor %}
+
+  {% endblock %}
+  {% block pagination %}
+    {% include "includes/pagination.html" %}
+  {% endblock %}
