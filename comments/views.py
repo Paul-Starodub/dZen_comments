@@ -52,9 +52,8 @@ def add_comment(request) -> HttpResponseRedirect | HttpResponse:
 
 
 def comment_list(request) -> HttpResponse:
-    comments = Comment.objects.filter(parent_comment=None).order_by(
-        "-created_at"
-    )
+    sort_by = request.GET.get("sort_by", "-created_at")
+    comments = Comment.objects.filter(parent_comment=None).order_by(sort_by)
     paginator = Paginator(comments, 25)
     page = request.GET.get("page")
     comments = paginator.get_page(page)
