@@ -8,9 +8,15 @@
       <ul>
         {% for reply in replies %}
           <li>
-            <p><a href="{% url 'comments:comment_detail' reply.id %}">{{ reply.text }}</a></p>
+            <p 
+              class="btn btn-warning"
+            >
+              <a href="{% url 'comments:comment_detail' reply.id %}">
+                {{ reply.created_at }}
+              </a>
+            </p>
             <p>By: {{ reply.user.username }}</p>
-            <p>Posted at: {{ reply.created_at }}</p>
+            <p>{{ reply.text }}</p>
           </li>
           <hr>
         {% endfor %}
@@ -19,7 +25,6 @@
       <h4 >No replies yet.</h4>
     {% endif %}
         <br>
-    <!-- Add form to reply to the comment -->
     <h4>Reply to Comment:</h4>
     <form method="post" action="{% url 'comments:comment_detail' comment.id %}" novalidate>
       {% csrf_token %}
