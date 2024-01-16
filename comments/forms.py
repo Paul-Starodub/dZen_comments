@@ -1,3 +1,6 @@
+from typing import Any
+
+import bleach
 from captcha.fields import CaptchaField
 
 from django import forms
@@ -34,6 +37,7 @@ class CommentForm(forms.Form):
 
     def clean(self) -> dict:
         cleaned_data = super().clean()
+        cleaned_data["text"] = self.clean_text()
 
         email = cleaned_data.get("email", "")
         username = cleaned_data.get("username", "")
@@ -67,3 +71,9 @@ class CommentForm(forms.Form):
             )
 
         return cleaned_data
+
+    def clean_text(self) -> Any:
+        text = self.cleaned_data["text"]
+        allowed_tags = ["a", "code", "i", "strong"]
+        cleaned_text = bleach.clean(text, tags=allowed_tags, strip=True)
+        return cleaned_text

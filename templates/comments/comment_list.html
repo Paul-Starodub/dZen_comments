@@ -13,7 +13,7 @@
       {{ comment.user.username }} - <a href="{% url 'comments:comment_detail' comment.id %}" class="btn btn-secondary">{{ comment.created_at }}</a>
       <br>
       <br>
-      {{ comment.text }}
+      {{ comment.text|safe }}
       <hr>
     </div>
   {% endfor %}
