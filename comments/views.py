@@ -25,9 +25,10 @@ def add_comment(request) -> HttpResponseRedirect | HttpResponse:
                 user.save()
 
             parent_comment_id = request.POST.get("parent_comment_id")
-            print(parent_comment_id)
             if parent_comment_id:
-                parent_comment = Comment.objects.get(pk=parent_comment_id)
+                parent_comment = get_object_or_404(
+                    Comment, pk=parent_comment_id
+                )
                 reply = Comment(
                     user=user,
                     text=form.cleaned_data["text"],
@@ -62,11 +63,33 @@ def comment_list(request) -> HttpResponse:
     )
 
 
-def comment_detail(request, comment_id) -> HttpResponse:
+def comment_detail(request, comment_id) -> HttpResponseRedirect | HttpResponse:
     comment = get_object_or_404(Comment, pk=comment_id)
     replies = comment.replies.all()
+
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            user, created = User.objects.get_or_create(
+                email=form.cleaned_data["email"],
+                defaults={"username": form.cleaned_data["username"]},
+            )
+
+            reply = Comment(
+                user=user,
+                text=form.cleaned_data["text"],
+                parent_comment=comment,
+            )
+            reply.save()
+
+            return HttpResponseRedirect(
+                request.path
+            )  # Redirect to the same page after adding a comment
+    else:
+        form = CommentForm()
+
     return render(
         request,
         "comments/comment_detail.html",
-        {"comment": comment, "replies": replies},
+        {"comment": comment, "replies": replies, "form": form},
     )
