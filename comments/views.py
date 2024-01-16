@@ -53,7 +53,11 @@ def add_comment(request) -> HttpResponseRedirect | HttpResponse:
 
 def comment_list(request) -> HttpResponse:
     sort_by = request.GET.get("sort_by", "-created_at")
-    comments = Comment.objects.filter(parent_comment=None).order_by(sort_by)
+    comments = (
+        Comment.objects.filter(parent_comment=None)
+        .order_by(sort_by)
+        .select_related("user")
+    )
     paginator = Paginator(comments, 25)
     page = request.GET.get("page")
     comments = paginator.get_page(page)
@@ -64,7 +68,7 @@ def comment_list(request) -> HttpResponse:
 
 def comment_detail(request, comment_id) -> HttpResponseRedirect | HttpResponse:
     comment = get_object_or_404(Comment, pk=comment_id)
-    replies = comment.replies.all()
+    replies = comment.replies.all().select_related("user")
 
     if request.method == "POST":
         form = CommentForm(request.POST)
