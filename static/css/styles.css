@@ -1,0 +1,10 @@
+body {
+    margin-top: 40px;
+    background-image: url(https://cdn.pixabay.com/photo/2018/01/30/22/50/forest-3119826_1280.jpg);
+    background-size: cover;
+    color: whitesmoke;
+}
+form {
+  max-width: 600px;
+  margin: auto;
+}
