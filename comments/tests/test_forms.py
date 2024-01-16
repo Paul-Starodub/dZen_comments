@@ -24,6 +24,7 @@ class CommentFormTests(TestCase):
             "text": "Valid comment text",
         }
         form = CommentForm(data=form_data)
+
         self.assertTrue(form.is_valid())
 
     def test_duplicate_email(self) -> None:
@@ -74,6 +75,7 @@ class CommentFormTests(TestCase):
             "text": '<a href="#">Test</a><code>Code</code><i>Italic</i><strong>Bold</strong>',
         }
         form = CommentForm(data=form_data)
+
         self.assertTrue(form.is_valid())
         self.assertEqual(
             form.cleaned_data["text"],
