@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+  {% block content %} 
+    {% if replies %}
+      <h4>Replies:</h4>
+      <br>
+      <ul>
+        {% for reply in replies %}
+          <li>
+            <p><a href="{% url 'comments:comment_detail' reply.id %}">{{ reply.text }}</a></p>
+            <p>By: {{ reply.user.username }}</p>
+            <p>Posted at: {{ reply.created_at }}</p>
+          </li>
+          <hr>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <h4 >No replies yet.</h4>
+    {% endif %}
+        <br>
+    <!-- Add form to reply to the comment -->
+    <h4>Reply to Comment:</h4>
+    <form method="post" action="{% url 'comments:comment_detail' comment.id %}" novalidate>
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button type="submit" value="Submit" class="btn btn-success">Reply</button>
+    </form>
+  {% endblock %}
