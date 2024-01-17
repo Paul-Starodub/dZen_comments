@@ -37,7 +37,9 @@ class CommentForm(forms.Form):
 
     def clean(self) -> dict:
         cleaned_data = super().clean()
-        cleaned_data["text"] = self.clean_text()
+        text = cleaned_data.get("text")
+        if text:
+            cleaned_data["text"] = self.clean_text()
 
         email = cleaned_data.get("email", "")
         username = cleaned_data.get("username", "")
