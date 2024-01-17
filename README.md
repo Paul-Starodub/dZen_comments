@@ -12,7 +12,9 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
-
+## .env file
+Open file .env.sample and change environment variables to yours. Also rename file extension to .env
+***
 ## Run on local server
 - Install PostgreSQL, create DB and superuser from terminal
 - Connect DB
