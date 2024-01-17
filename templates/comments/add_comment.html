@@ -4,13 +4,7 @@
 {% block content %}
   <form method="post" action="" novalidate>
     {% csrf_token %}
-    {{ form.non_field_errors }}
-    {{ form.errors|as_crispy_errors }}
-    {{ form.username|as_crispy_field }}
-    {{ form.email|as_crispy_field }}
-    {{ form.homepage|as_crispy_field }}
-    {{ form.captcha|as_crispy_field }}
-    {{ form.text|as_crispy_field }}
+    {{ form|crispy }}
     <input type="submit" value="Submit" class="btn btn-success">
   </form>
 {% endblock %}
