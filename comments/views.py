@@ -43,7 +43,7 @@ def add_comment(request) -> HttpResponseRedirect | HttpResponse:
                 )
                 comment.save()
 
-            # Redirect to the comment list page or any other desired page
+            # Redirect to the comment list page
             return redirect("comments:comment_list")
     else:
         form = CommentForm()
@@ -68,7 +68,7 @@ def comment_list(request) -> HttpResponse:
 
 def comment_detail(request, comment_id) -> HttpResponseRedirect | HttpResponse:
     comment = get_object_or_404(Comment, pk=comment_id)
-    replies = comment.replies.all().select_related("user")
+    replies = comment.replies.select_related("user")
 
     if request.method == "POST":
         form = CommentForm(request.POST)
