@@ -42,7 +42,7 @@ You can use following:
 - superuser:
   - username: admin
   - Email: admin@gmail.com
-  - Password: vovk7777
+  - Password: vovk7777(necessary only for admin page)
 - user:
   - Email: red@gmail.com
   - username: red
