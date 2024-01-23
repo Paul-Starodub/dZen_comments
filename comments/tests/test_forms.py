@@ -3,6 +3,8 @@ from django.contrib.auth import get_user_model
 
 from comments.forms import CommentForm
 
+from captcha.conf import settings as captcha_settings
+
 
 class CommentFormTests(TestCase):
     def setUp(self) -> None:
@@ -10,7 +12,6 @@ class CommentFormTests(TestCase):
             username="testuser",
             email="test@example.com",
         )
-        from captcha.conf import settings as captcha_settings
 
         captcha_settings.CAPTCHA_TEST_MODE = True
 
