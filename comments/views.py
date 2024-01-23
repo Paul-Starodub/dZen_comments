@@ -1,12 +1,12 @@
 from django.core.paginator import Paginator
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, HttpRequest
 from django.shortcuts import redirect, render, get_object_or_404
 
 from .models import Comment, User
 from .forms import CommentForm
 
 
-def add_comment(request) -> HttpResponseRedirect | HttpResponse:
+def add_comment(request: HttpRequest) -> HttpResponseRedirect | HttpResponse:
     if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -51,7 +51,7 @@ def add_comment(request) -> HttpResponseRedirect | HttpResponse:
     return render(request, "comments/add_comment.html", {"form": form})
 
 
-def comment_list(request) -> HttpResponse:
+def comment_list(request: HttpRequest) -> HttpResponse:
     sort_by = request.GET.get("sort_by", "-created_at")
     comments = (
         Comment.objects.filter(parent_comment=None)
@@ -66,7 +66,7 @@ def comment_list(request) -> HttpResponse:
     )
 
 
-def comment_detail(request, comment_id) -> HttpResponseRedirect | HttpResponse:
+def comment_detail(request: HttpRequest, comment_id: int) -> HttpResponseRedirect | HttpResponse:
     comment = get_object_or_404(Comment, pk=comment_id)
     replies = comment.replies.select_related("user")
 
